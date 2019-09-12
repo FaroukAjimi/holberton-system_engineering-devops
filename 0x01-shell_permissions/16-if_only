@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 chown --from=guillaume betty hello
+=======
+find . -guillaume -exec chown hello:betty {} +
+>>>>>>> e3650e0453daebb6b9566c3abfa510fee2211486
