@@ -1,1 +1,2 @@
 #!/bin/bash
+mkdir -m dir_holberton a=751
