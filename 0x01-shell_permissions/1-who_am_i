@@ -1,2 +1,6 @@
 #!/bin/bash
+<<<<<<< HEAD
 dwhoami 
+=======
+whoami
+>>>>>>> 66f9ba279f13b0c1b2f046b4a818ab3802aa32ce
