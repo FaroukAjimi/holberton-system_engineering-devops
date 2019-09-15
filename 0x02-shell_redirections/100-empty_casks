@@ -1,2 +1,2 @@
 #!/bin/bash
-find | cut -d / -f 2- | tr / \\n | sort | uniq
+find -empty | cut -d / -f 2- | tr / \\n | sort | uniq
