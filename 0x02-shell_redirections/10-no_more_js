@@ -1,2 +1,2 @@
 #!/bin/bash
-find -type d,f -name *.js -exec rmdir {} \;
+find -type f -name "*.js" -exec rm {} \;
