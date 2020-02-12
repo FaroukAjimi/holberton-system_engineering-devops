@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # hello
-i=1 ;while [ $i -eq 1 ]; do sudo touch /var/run/holbertonscript.pid; echo "To infinity and beyond";sleep 2 ; trap "echo I hate the kill command" SIGTERM;trap "echo Y U no love me?!" SIGINT; trap "sudo rm /var/run/holbertonscript.pid" SIGQUIT; done
+i=1 ;while [ $i -eq 1 ]; do sudo bash -c "echo $$ > /var/run/holbertonscript.pid"; echo "To infinity and beyond";sleep 2 ; trap "echo I hate the kill command" SIGTERM;trap "echo Y U no love me?!" SIGINT; trap "sudo rm /var/run/holbertonscript.pid" SIGQUIT; done
