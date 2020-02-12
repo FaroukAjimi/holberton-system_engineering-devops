@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+command="pgrep -f 7-highlander" ; kill -9 $(eval "$command")

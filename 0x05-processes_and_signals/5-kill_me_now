@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+command="pgrep -f 4-to_infinity_and_beyond" ; kill $(eval "$command")
