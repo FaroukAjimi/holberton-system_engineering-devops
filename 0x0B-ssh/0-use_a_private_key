@@ -1,0 +1,3 @@
+#!/bin/bash
+#connection via Private Key
+ssh -i ~/.ssh/holberton ubuntu@34.74.84.179
