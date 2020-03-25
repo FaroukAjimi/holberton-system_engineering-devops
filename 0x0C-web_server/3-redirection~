@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo apt-get -y update"
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo ap-get -y install nginx"
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo systemctl start nginx"
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo sed -i 'rewrite ^/redirect_me/$ https://www.youtube.com/watch?v=QH2-TGUlwu4;'"
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo systemctl restart nginx"
