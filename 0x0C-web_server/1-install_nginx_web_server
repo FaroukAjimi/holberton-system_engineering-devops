@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #nginx installation
-ssh ~/.ssh/holberton ubuntu@35.243.138.65 "sudo apt-get -y update"
-ssh ~/.ssh/holberton ubuntu@35.243.138.65 "sudo apt-get -y install nginx"
-ssh ~/.ssh/holberton ubuntu@35.243.138.65 "sudo systemctl start nginx" 
-ssh ~/.ssh/holberton ubuntu@35.243.138.65 "sudo chown -R ubuntu:ubuntu /var/www" 
-ssh ~/.ssh/holberton ubuntu@35.243.138.65 "sudo echo 'Holberton School' > /var/www/html/index.nginx-debian.html"
-ssh ~/.ssh/holberton ubuntu@35.243.138.65 "sudo systemctl restart nginx"
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo apt-get -y update"
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo apt-get -y install nginx"
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo systemctl start nginx" 
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo chown -R ubuntu:ubuntu /var/www" 
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo echo 'Holberton School' > /var/www/html/index.nginx-debian.html"
+ssh -i ~/.ssh/holberton ubuntu@35.243.138.65 "sudo systemctl restart nginx"
