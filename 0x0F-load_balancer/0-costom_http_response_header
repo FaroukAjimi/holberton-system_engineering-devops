@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+#nginx installation
+ssh ubuntu@35.243.138.65 "sudo apt-get -y update"
+ssh ubuntu@35.243.138.65 "sudo apt-get -y install nginx"
+ssh ubuntu@35.243.138.65 "sudo systemctl start nginx"
+ssh ubuntu@35.243.138.65 "sudo sed -i '63i add_header X-Served-By $HOSTNAME;' /etc/nginx/nginx.conf"
+ssh ubuntu@34.229.218.98 "sudo systemctl restart nginx"
+ssh ubuntu@34.229.218.98 "sudo apt-get -y update"
+ssh ubuntu@34.229.218.98 "sudo apt-get -y install nginx"
+ssh ubuntu@34.229.218.98 "sudo systemctl start nginx"
+ssh ubuntu@34.229.218.98 "sudo sed -i '63i add_header X-Served-By $HOSTNAME;' /etc/nginx/nginx.conf"
+ssh ubuntu@35.243.138.65 "sudo systemctl restart nginx"
+ssh ubuntu@34.243.138.65 "sudo systemctl restart nginx"
