@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # debugging challenge
-ln -s /etc/nginx/sites-available/default /etc/nginx/sites-available/default
+sudo ln -s /etc/nginx/sites-available/default /etc/nginx/sites-available/default
 sudo service nginx start
