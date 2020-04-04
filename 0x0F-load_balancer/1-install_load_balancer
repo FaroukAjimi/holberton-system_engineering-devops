@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# install Goole
+apt-get-repository ppa:vbernat/haproxy-1.8
+sudo apt-get update
+sudo apt-get install haproxy
+echo -e "listen 1044-lb-01\n\tbind *:80\n\tstats enable\n\tbalance roundrobin\n\tserver 1044-web-01 35.243.138.65:80 check\n\tserver 1044-web-02 34.229.218.98:80 check" >> /etc/haproxy/haproxy.cfg
+sudo service haproxy restart
