@@ -10,5 +10,5 @@ then
 elif [ $# -eq 2 ]
      then
      echo -n "The subdomain $2"
-     dig "$2.$1" | grep -A 1 'ANSWER SECTION' | tail -n 1 | awk '{print " is a "4 " record and points to "$5}'
+     dig "$2.$1" | grep -A 1 'ANSWER SECTION' | tail -n 1 | awk '{print " is a "$4 " record and points to "$5}'
 fi
