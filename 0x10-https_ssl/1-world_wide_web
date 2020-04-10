@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# IAM IN LOVE WITH MY CODE
+list='www lb-01 web-01 web-02'
+if [ $# -eq 1 ]
+then
+    for i in $list
+    do echo -n "The subdomain $2"
+    dig "$i.$1" | grep -A 1 'ANSWER SECTION' | tail -n 1 | awk '{print "is a " $4 " record and points to "$5}'
+    done
+elif [ $# -eq 2 ]
+     then
+     echo -n "The subdomain $2"
+     dig "$2.$1" | grep -A 1 'ANSWER SECTION' | tail -n 1 | awk '{print " is a "4 " record and points to "$5}'
+fi
