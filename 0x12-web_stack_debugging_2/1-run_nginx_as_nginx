@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# user nginx
+pkill apache2
+sudo chmod 777 /etc/nginx/nginx.conf
+sudo emacs /etc/nginx-available/default
+sudo su nginx -c "service nginx start"
