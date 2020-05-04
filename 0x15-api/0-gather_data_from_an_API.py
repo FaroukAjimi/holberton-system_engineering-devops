@@ -2,7 +2,7 @@
 """task 0"""
 import requests
 import sys
-if __name__=='__main__':
+if __name__ == '__main__':
     if len(sys.argv) == 2 and sys.argv[1].isdigit():
         arg = sys.argv[1]
         res1 = requests.get('https://jsonplaceholder.typicode.com/todos')
@@ -11,7 +11,7 @@ if __name__=='__main__':
         usr = res2.json()
         for y in usr:
             if y['id'] == int(arg):
-                user = y['name'] 
+                user = y['name']
         Max = 0
         Done = 0
         titles = []
@@ -20,9 +20,9 @@ if __name__=='__main__':
                 if key == 'userId' and value == int(arg):
                     Max += 1
                     for key, value in i.items():
-                        if key == 'completed' and value == True:
+                        if key == 'completed' and value is True:
                             Done += 1
                             titles.append(i['title'])
-        print('Employee {} is done with tasks({}/{}):'.format(user, Done, Max))                        
+        print('Employee {} is done with tasks({}/{}):'.format(user, Done, Max))
         for i in titles:
             print('\t {}'.format(i))
