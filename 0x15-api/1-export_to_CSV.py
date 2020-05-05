@@ -16,7 +16,7 @@ if __name__ == '__main__':
                 usern = y['username']
         Max = 0
         Done = 0
-        titles = []
+        titles=[]
         for i in s:
             for key, value in i.items():
                 if key == 'userId' and value == int(arg):
