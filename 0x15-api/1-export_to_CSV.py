@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """Task1 """
-import requests
 import csv
+import requests
 import sys
 if __name__ == '__main__':
     if len(sys.argv) == 2 and sys.argv[1].isdigit():
@@ -16,7 +16,7 @@ if __name__ == '__main__':
                 usern = y['username']
         Max = 0
         Done = 0
-        titles=[]
+        titles = []
         for i in s:
             for key, value in i.items():
                 if key == 'userId' and value == int(arg):
