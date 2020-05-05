@@ -10,8 +10,11 @@ if __name__ == '__main__':
         s = res1.json()
         users = res2.json()
         for i in range(1, len(users) + 1):
-            info = request.get('https://jsonplaceholder.typicode.com/todos?userId={}'.format(i))
-            usern = request.get('https://jsonplaceholder.typicode.com/users/{}'.format(i))
+            info = request.get(
+                'https://jsonplaceholder.typicode.com/todos?userId={}'
+                .format(i))
+            usern = request.get(
+                'https://jsonplaceholder.typicode.com/users/{}'.format(i))
             username = usern.json().get('username')
             to = info.json()
             dta[str(i)] = []
@@ -21,5 +24,5 @@ if __name__ == '__main__':
                 ele['task'] = d.get('title')
                 ele['completed'] = d.get('completed')
                 data[str(i)].append(ele)
-        with open('todo_all_emplyees.json', 'w+', newline='') as f:
+        with open('todo_all_employees.json', 'w+', newline='') as f:
             json.dump(dta, f)
