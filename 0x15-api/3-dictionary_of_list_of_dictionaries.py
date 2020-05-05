@@ -24,5 +24,5 @@ if __name__ == '__main__':
                 ele['task'] = d.get('title')
                 ele['completed'] = d.get('completed')
                 data[str(i)].append(ele)
-        with open('todo_all_employees.json', 'w+', newline='') as f:
+        with open('todoall_employees.json', 'w+', newline='') as f:
             json.dump(dta, f)
