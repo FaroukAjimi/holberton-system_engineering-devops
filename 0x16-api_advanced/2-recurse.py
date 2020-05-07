@@ -27,6 +27,6 @@ def recurse(subreddit, hot_list=[]):
             hot_list.append(s)
             i = i + 1
     except:
-        pass
+        return(None)
     finally:
         return(hot_list)
