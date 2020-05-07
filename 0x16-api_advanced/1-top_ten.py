@@ -1,9 +1,16 @@
 #!/usr/bin/python3
+"""
+top ten comments
+"""
+
+
 import json
 import requests
 
 
 def top_ten(subreddit):
+    """function that search for the best first
+    ten hot comments"""
     headers = {
         'User-Agent': 'My User Agent 1.0',
         'From': '1044@holbertonschool.com'
