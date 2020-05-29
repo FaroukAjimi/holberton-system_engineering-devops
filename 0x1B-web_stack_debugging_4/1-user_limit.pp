@@ -1,3 +1,4 @@
+# fix hard, soft nofile
 exec {'fix soft':
 path    => ['/bin/', '/sbin/', '/usr/bin/', '/usr/sbin/'],
 command => "sudo sed -i 's/holberton soft nofile 4/holerton soft nofile 700000/' /etc/security/limits.conf; /sbin/sysctl -p",
